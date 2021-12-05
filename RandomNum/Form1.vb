@@ -2,6 +2,7 @@
 
     Dim NumericText2 As Boolean
     Dim NumericText1 As Boolean
+    Dim MaxNum As String = 9999999995
 
 
 
@@ -21,6 +22,23 @@
             End If
         End With
         If NumericText2 = True And NumericText1 = True Then
+            If TextBox1.Text > MaxNum Then
+                Dim results As DialogResult
+                results = MsgBox("The number is too high to generate. Are you sure to generate the number?", vbYesNo + vbExclamation, "Warning!")
+                If results = vbYes Then
+                    Randomize()
+                    Dim value2 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
+                    If value2 >= TextBox1.Text Then
+                        MsgBox("Sorry, the generated number is greater than entered number. Please try again.", vbOKOnly + vbCritical, "Error")
+                    ElseIf value2 <= TextBox2.Text Then
+                        MsgBox("Sorry, the generated number is less than entered number. Please try again.", vbOKOnly + vbCritical, "Error")
+                    Else
+                        Label4.Text = "Random Number: " & value2
+                    End If
+                Else
+                    Exit Sub
+                End If
+            End If
             Randomize()
             Dim value As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
             If value >= TextBox1.Text Then
