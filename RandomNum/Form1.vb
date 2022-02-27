@@ -53,4 +53,57 @@
             MsgBox("The value is not a number. Enter value that is an number. For example: Min Number should be 8 and Max number should be 20", vbOKOnly + vbCritical, "Error")
         End If
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        If RadioButton1.Checked = True Then
+            Randomize()
+            Dim value3 As Integer = CInt(Int((1000000 * Rnd()) + 1))
+            Dim value4 As Integer = 0
+            TextBox1.Text = value3
+            TextBox2.Text = value4
+            Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
+            Label4.Text = "Random Number: " & value5
+        ElseIf RadioButton2.Checked = True Then
+            Randomize()
+            Dim value3 As Integer = CInt(Int((100 * Rnd()) + 1))
+            Dim value4 As Integer = 0
+            TextBox1.Text = value3
+            TextBox2.Text = value4
+            Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
+            Label4.Text = "Random Number: " & value5
+        ElseIf RadioButton3.Checked = True Then
+            Randomize()
+            Dim value3 As Integer = CInt(Int((10000 * Rnd()) + 1))
+            Dim value4 As Integer = 0
+            TextBox1.Text = value3
+            TextBox2.Text = value4
+            Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
+            Label4.Text = "Random Number: " & value5
+        ElseIf RadioButton4.Checked = True Then
+            Randomize()
+            Dim value3 As Integer = CInt(Int((900000000 * Rnd()) + 5))
+            Dim value4 As Integer = CInt(Int((5 * Rnd()) + 0))
+            TextBox1.Text = value3
+            TextBox2.Text = value4
+            Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
+            Label4.Text = "Random Number: " & value5
+        Else
+            MsgBox("Please choose an option first.", vbOKOnly + vbCritical, "Error")
+        End If
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+        RadioButton3.Checked = False
+        RadioButton4.Checked = False
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
+        MsgBox("Random Number Generator 1.2, Created by: Michelle1574", vbOKOnly + vbInformation, "About Random Number Generator")
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
 End Class
