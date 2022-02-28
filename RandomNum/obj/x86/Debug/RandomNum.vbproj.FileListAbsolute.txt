@@ -25,3 +25,12 @@ C:\Users\Michał\Downloads\vb-random-number-generator-main\RandomNum\bin\Debug\R
 C:\Users\Michał\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.Form1.resources
 C:\Users\Michał\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.Resources.resources
 C:\Users\Michał\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.vbproj.GenerateResource.Cache
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.exe
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.xml
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.pdb
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\bin\Debug\RandomNum.exe
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\bin\Debug\RandomNum.pdb
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\bin\Debug\RandomNum.xml
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.Form1.resources
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.Resources.resources
+C:\Users\Michał Pustelnik\Downloads\vb-random-number-generator-main\RandomNum\obj\x86\Debug\RandomNum.vbproj.GenerateResource.Cache

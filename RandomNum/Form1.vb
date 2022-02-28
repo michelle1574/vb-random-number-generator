@@ -24,16 +24,16 @@
         If NumericText2 = True And NumericText1 = True Then
             If TextBox1.Text > MaxNum Then
                 Dim results As DialogResult
-                results = MsgBox("The number is too high to generate. Are you sure to generate the number?", vbYesNo + vbExclamation, "Warning!")
+                results = MsgBox("Liczba jest za duża do wygenerowania. Czy chcesz ją wygenerować?", vbYesNo + vbExclamation, "Uwaga")
                 If results = vbYes Then
                     Randomize()
                     Dim value2 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
                     If value2 >= TextBox1.Text Then
-                        MsgBox("Sorry, the generated number is greater than entered number. Please try again.", vbOKOnly + vbCritical, "Error")
+                        MsgBox("Przepraszamy, liczba jest większa niż liczba maks. Proszę spróbować jeszcze raz.", vbOKOnly + vbCritical, "Błąd")
                     ElseIf value2 <= TextBox2.Text Then
-                        MsgBox("Sorry, the generated number is less than entered number. Please try again.", vbOKOnly + vbCritical, "Error")
+                        MsgBox("Przepraszamy, liczba jest mniejsza niż liczba min. Proszę spróbować jeszcze raz.", vbOKOnly + vbCritical, "Błąd")
                     Else
-                        Label4.Text = "Random Number: " & value2
+                        Label4.Text = "Losowa Liczba: " & value2
                     End If
                 Else
                     Exit Sub
@@ -42,15 +42,15 @@
             Randomize()
             Dim value As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
             If value >= TextBox1.Text Then
-                MsgBox("Sorry, the generated number is greater than entered number. Please try again.", vbOKOnly + vbCritical, "Error")
+                MsgBox("Przepraszamy, liczba jest większa niż liczba maks. Proszę spróbować jeszcze raz.", vbOKOnly + vbCritical, "Błąd")
             ElseIf value <= TextBox2.Text Then
-                MsgBox("Sorry, the generated number is less than entered number. Please try again.", vbOKOnly + vbCritical, "Error")
+                MsgBox("Przepraszamy, liczba jest mniejsza niż liczba min. Proszę spróbować jeszcze raz.", vbOKOnly + vbCritical, "Błąd")
             Else
-                Label4.Text = "Random Number: " & value
+                Label4.Text = "Losowa Liczba: " & value
             End If
 
         Else
-            MsgBox("The value is not a number. Enter value that is an number. For example: Min Number should be 8 and Max number should be 20", vbOKOnly + vbCritical, "Error")
+            MsgBox("Wartość nie jest cyfrą. Wpisz wartość która jest cyfrą, na przykład: Liczba maks.: 20, Liczba min.: 8", vbOKOnly + vbCritical, "Błąd")
         End If
     End Sub
 
@@ -62,7 +62,7 @@
             TextBox1.Text = value3
             TextBox2.Text = value4
             Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
-            Label4.Text = "Random Number: " & value5
+            Label4.Text = "Losowa Liczba: " & value5
         ElseIf RadioButton2.Checked = True Then
             Randomize()
             Dim value3 As Integer = CInt(Int((100 * Rnd()) + 1))
@@ -70,7 +70,7 @@
             TextBox1.Text = value3
             TextBox2.Text = value4
             Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
-            Label4.Text = "Random Number: " & value5
+            Label4.Text = "Losowa Liczba: " & value5
         ElseIf RadioButton3.Checked = True Then
             Randomize()
             Dim value3 As Integer = CInt(Int((10000 * Rnd()) + 1))
@@ -78,7 +78,7 @@
             TextBox1.Text = value3
             TextBox2.Text = value4
             Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
-            Label4.Text = "Random Number: " & value5
+            Label4.Text = "Losowa Liczba: " & value5
         ElseIf RadioButton4.Checked = True Then
             Randomize()
             Dim value3 As Integer = CInt(Int((900000000 * Rnd()) + 5))
@@ -86,9 +86,9 @@
             TextBox1.Text = value3
             TextBox2.Text = value4
             Dim value5 As Integer = CInt(Int((TextBox1.Text * Rnd()) + TextBox2.Text))
-            Label4.Text = "Random Number: " & value5
+            Label4.Text = "Losowa Liczba: " & value5
         Else
-            MsgBox("Please choose an option first.", vbOKOnly + vbCritical, "Error")
+            MsgBox("Proszę wybrać najpierw opcję", vbOKOnly + vbCritical, "Błąd")
         End If
     End Sub
 
@@ -100,7 +100,7 @@
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
-        MsgBox("Random Number Generator 1.2, Created by: Michelle1574", vbOKOnly + vbInformation, "About Random Number Generator")
+        MsgBox("Generator Losowych Liczb wersja 1.2, stworzona przez Michelle1574, przetłumaczona przez Michelle1574", vbOKOnly + vbInformation, "O generatorze losowych liczb")
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
